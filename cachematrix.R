@@ -36,7 +36,7 @@ cacheSolve <- function(x, ...) {
             print("getting cached inverse matrix")
             return(i)
         }
-        data<-i$get()                           ##if the inverse is not calculated
+        data<-x$get()                           ##if the inverse is not calculated
         i<-solve(data,...)
         x$setI(i)
         return(i)
